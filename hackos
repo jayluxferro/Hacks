@@ -1,0 +1,3 @@
+cp /etc/lsb-release.bak /etc/lsb-release
+cp /etc/os-release.bak /etc/os-release
+cp /etc/debian_version.bak /etc/debian_version

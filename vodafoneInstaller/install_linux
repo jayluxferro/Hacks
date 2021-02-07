@@ -1,0 +1,142 @@
+#!/bin/bash
+
+#VERSION=22.001.03.01.03
+
+install_exit()
+{
+    echo "Press any key to exit. "
+    read COMMAND
+    exit
+}
+
+WHEREWHOAMI="`which whoami`"
+ROOTORNOT="`$WHEREWHOAMI`"
+#echo "$ROOTORNOT"
+if [ "$ROOTORNOT" != "root" ]
+then
+    echo "You must run the install process by root."
+    install_exit
+fi
+
+CURRENTPATH="$(dirname "$0")"
+#echo "$CURRENTPATH"
+TMP_FILE_PATH="/tmp/MobileBrServ_AutoRun"
+INSTALL_FILE="/linux_mbb_install"
+SYSCONFIG_PATH="/ArConfig.dat"
+INSTALL_SHELL="/install"
+DATACARD_VERIFY="/DataCard_Verify"
+MBB_BIN_FILE="/mbbservice.bin"
+MBB_FILE="/mbbservice"
+SYSCONFIG_VALUE="VALUE"
+
+INSTALL_PATH="/usr/local/MobileBrServ"
+
+LOG_PATH="/tmp/MobileBrServ_autoinstall_log"
+
+#define the install variable
+FIRST_INSTALL="NO"
+INSTALL_OR_NOT="NO"
+
+echo "Current path = ${CURRENTPATH}" > ${LOG_PATH}
+
+check_ISO()
+{
+    echo "begin to verify ISO ..." | tee -a ${LOG_PATH} #> /dev/null 2>&1
+    #TESTFILE="${CURRENTPATH}"
+    #echo "$TESTFILE"
+    #read COMMAND
+    if [ ! -f "${CURRENTPATH}${INSTALL_FILE}${MBB_BIN_FILE}" ]
+    then
+    echo "${CURRENTPATH}${INSTALL_FILE}${MBB_BIN_FILE}"
+    echo "the .bin file is not exist! " | tee -a ${LOG_PATH}
+    install_exit
+    fi
+
+    if [ ! -f "${CURRENTPATH}${INSTALL_FILE}${SYSCONFIG_PATH}" ]
+    then
+    echo "the ArConfig.dat file is not exist! " | tee -a ${LOG_PATH}
+    install_exit
+    fi 
+    echo "verify the ISO succeed !" | tee -a ${LOG_PATH}  
+}
+
+
+
+backup_ISO()
+{
+    echo "begin to copy install file..." | tee -a ${LOG_PATH}
+    
+    if [ -d "${TMP_FILE_PATH}" ]
+    then
+    rm -f -R "${TMP_FILE_PATH}"
+    fi
+
+    mkdir -p "${TMP_FILE_PATH}"    
+    cp -f -R "${CURRENTPATH}${INSTALL_FILE}" "${TMP_FILE_PATH}${INSTALL_FILE}"
+    chmod a+wrx -R "${TMP_FILE_PATH}${INSTALL_FILE}"
+    sleep 1
+}
+
+x_install_mbbservice()
+{
+    echo "now begin to install... " | tee -a ${LOG_PATH}
+
+    #read cmo
+    export DISPLAY=":0"
+    if which xterm;
+    then
+        echo "Run xterm and begin to install" | tee -a ${LOG_PATH}
+        TERMINAL=`which xterm`
+        ${TERMINAL} '-e' "${TMP_FILE_PATH}${INSTALL_FILE}${INSTALL_SHELL}"
+        echo "Exit install and remove temporary files" | tee -a ${LOG_PATH}
+        exit 0
+        #install_exit
+    fi
+    
+    if which gnome-terminal;
+    then
+        echo "Run gnome-terminal and begin to install" | tee -a ${LOG_PATH}
+        TERMINAL=`which gnome-terminal`
+        ${TERMINAL} '-e' "${TMP_FILE_PATH}${INSTALL_FILE}${INSTALL_SHELL}"
+        echo "Exit install and remove temporary files" | tee -a ${LOG_PATH}
+        exit 0
+        #install_exit
+    fi
+    
+    if which konsole;
+    then
+        echo "Run konsole and begin to install" | tee -a ${LOG_PATH}
+        TERMINAL=`which konsole`
+        ${TERMINAL} '-e' "${TMP_FILE_PATH}${INSTALL_FILE}${INSTALL_SHELL}"
+        echo "Exit install and remove temporary files" | tee -a ${LOG_PATH}
+        exit 0
+        #install_exit
+    fi
+
+    echo "Run shell and begin to install" | tee -a ${LOG_PATH}
+    "${TMP_FILE_PATH}${INSTALL_FILE}${INSTALL_SHELL}"
+    echo "Exit install and remove temporary files" | tee -a ${LOG_PATH}
+    exit 0
+    #install_exit
+}
+
+check_ISO
+#check_first_install
+#if [ "${FIRST_INSTALL}" = "YES" ]
+#then
+backup_ISO
+x_install_mbbservice
+#else
+#verify_version
+#fi
+#read mo
+
+
+
+
+
+
+
+
+
+

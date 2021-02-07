@@ -1,0 +1,6 @@
+mainMem.backing = "swap"  
+scsi0:0.virtualSSD = 1  
+MemTrimRate = "0"  
+sched.mem.pshare.enable = "FALSE"  
+MemAllowAutoScaleDown = "FALSE"  
+logging = "FALSE" 

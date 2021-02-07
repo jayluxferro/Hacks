@@ -1,0 +1,1 @@
+tshark -i <mon interface> -Y "http.request.method == "GET"" | tee -a get3.

@@ -1,0 +1,3 @@
+sed 's/quiet/quiet nouveau.modeset=0/g' -i /etc/default/grub
+update-grub
+reboot

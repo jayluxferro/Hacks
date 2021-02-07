@@ -1,0 +1,14 @@
+sudo apt-get install ubuntu-gnome-desktop^
+
+sudo apt-get remove ubuntu-desktop
+sudo apt-get remove unity
+sudo apt-get remove lightdm
+sudo apt-get purge ubuntu-settings
+sudo apt-get purge --auto-remove 'unity*'
+sudo apt-get purge --auto-remove 'libunity*'
+
+# thanks @Sergiy Kolodyazhnyy:
+sudo apt-get remove compiz jayatana
+
+# reinstalls the parts of Unity required by Ubuntu Gnome
+sudo apt-get install ubuntu-gnome-desktop^

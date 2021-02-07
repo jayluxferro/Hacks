@@ -1,0 +1,9 @@
+dmg2img -v -i /path/to/Hackintosh-Sierra-Zone.dmg -o /path/to/Hackintosh-Sierra-Zone-Uncompressed.dmg
+dd if=/path/to/Hackintosh-Sierra-Zone-Uncompressed.dmg of=/dev/sdb bs=1m
+
+# modifying bootflags
+Kernel=kernel.amd # for chameleon
+kcsuffix=amd
+
+
+

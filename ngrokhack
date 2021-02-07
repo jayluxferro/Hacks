@@ -1,0 +1,1 @@
+console.log(window.common.Session.Tunnels.command_line.URL)

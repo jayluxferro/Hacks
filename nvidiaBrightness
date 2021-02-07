@@ -1,0 +1,2 @@
+#look for Section "Device"
+Option "RegistryDwords" "EnableBrightnessControl=1"

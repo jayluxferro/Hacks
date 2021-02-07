@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /usr/share/android-sdk/tools/
+emulator -avd "Nexus_5_API_23"&
+cd ~/

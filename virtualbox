@@ -1,0 +1,3 @@
+Workaround command (replace vmname with your virtual machine name): VBoxManage modifyvm "vmname" --cpuidset 00000001 000306a9 00020800 80000201 178bfbff
+vbox http://bit.ly/VBdownload
+mavericks iso http://bit.ly/MavsISO

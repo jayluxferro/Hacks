@@ -1,0 +1,2 @@
+vhv.enable = "TRUE"
+hypervisor.cpuid.v0 = "FALSE"

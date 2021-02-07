@@ -1,0 +1,26 @@
+public static boolean isRecursionEnable = false;
+
+void runInBackground() {
+    if (isRecursionEnable)
+        return;    // Handle not to start multiple parallel threads
+
+    isRecursionEnable = true; // on exception on thread make it true again  
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            // DO your work here
+            // get the data
+            if (activity_is_not_in_background) {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //uddate UI
+                        runInBackground();
+                    }
+                });
+            } else {
+                runInBackground();
+            }
+        }
+    }).start();
+}

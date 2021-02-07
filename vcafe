@@ -1,0 +1,40 @@
+var now = new Date();
+        var year = now.getYear();
+        if (year < 1900) {
+                year += 1900;
+        }
+        var end = new Date("February 27, 2018 12:26:31");
+        var start = new Date();
+	var counttime=6130;
+        
+
+	        function toSt2(n) {
+			          s = "";
+				            if (n < 10) s += "0";
+				            return (s + n).toString();
+					            }       
+	        
+	        function toSt3(n) {
+			          s = "";
+				            if (n < 10) s += "00";
+				            else if (n < 100) s += "0";
+				            return (s + n).toString();
+					            }
+
+	        function countdown() {
+	          // d = new Date();
+		  // count = Math.floor(end.getTime() - d.getTime());
+		  count = (counttime--)*1000;
+	          // count = Math.floor(d.getTime() - start.getTime()); 
+	          if(count > 0) {
+	             miliseconds = toSt3(count%1000); count = Math.floor(count/1000);
+	             seconds = toSt2(count%60); count = Math.floor(count/60);
+	             minutes = toSt2(count%60); count = Math.floor(count/60);
+	             hours = toSt2(count%24); count = Math.floor(count/24);
+	             days = count;
+	             document.getElementById('c1').innerHTML = hours + ':' + minutes + ':' + seconds + '';
+	             setTimeout("countdown()", 1000);
+	           }
+	       }
+
+	window.onload=countdown;

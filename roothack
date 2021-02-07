@@ -1,0 +1,31 @@
+First of all, you must set root 's password.
+
+sudo passwd root
+Enter new UNIX password:
+
+Now you have root password. Now activate the root account:
+
+sudo usermod -U root
+
+Then you should allow lightdm, gdm or kdm to allow logging in as root.
+
+To enable this:
+In GDM
+
+Edit /etc/gdm/custom.conf file and include AllowRoot=true.
+In KDM
+
+Edit /etc/kde4/kdm/kdmrc file and change AllowRootLogin=false for AllowRootLogin=true.
+In LightDM
+
+This procedure enables the "Other" menu, so you can type the username root and login. You must edit /etc/lightdm/lightdm.conf and add greeter-show-manual-login=true. Then reboot.
+
+Others session managers have other methods to accomplish this.
+
+As you have noticed I gave the instructions but by any circumstance you should not run the GUI as root. Murphy's Law says that it is likely that you mess up somehow and will be annoyed starting again.
+I played around enough, how do I go back?
+
+To disable root login just type:
+
+sudo passwd -dl root
+

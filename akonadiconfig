@@ -1,0 +1,15 @@
+[Debug]
+Tracer=null
+
+[%General]
+Driver=QPSQL
+
+[QPSQL]
+Host=localhost
+InitDbPath=
+Name=akonadi
+Options=
+Password=akonadi
+ServerPath=
+StartServer=false
+User=akonadi

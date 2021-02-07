@@ -1,0 +1,5 @@
+#!/bin/bash
+jay=`seq $1 $2`
+for x in $jay; do
+	wget https://quotefancy.com/download/"$x"/original/wallpaper.jpg -O Quotefancy-"$x".jpg
+done

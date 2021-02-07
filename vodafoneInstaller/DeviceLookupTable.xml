@@ -1,0 +1,1465 @@
+<DeviceLookupTable>
+  <!-- General information -->
+  <Version>$Revision: 46709 $</Version>
+  <Timestamp>$Date: 2013-10-01 18:15:38 +0200 (Tue, 01 Oct 2013) $</Timestamp>
+  <!-- VMB version definitions (algorithm 1) -->
+  <VmbVersionDefinitions>
+    <RegistryValue Name="BuildVersion">HKLM\SOFTWARE\Vodafone\Common:BuildVersion</RegistryValue>
+    <RegistryValue Name="BuildVersion">HKLM\SOFTWARE\Vodafone\VMB:BuildVersion</RegistryValue>
+  </VmbVersionDefinitions>
+  <!-- Library and driver version definitions (algorithm 2) -->
+  <LibraryAndDriverVersionDefinitions>
+    <RegistryValue Name="DriverHuawei1">HKLM\SOFTWARE\Vodafone\VMB\Drivers\Huawei1:Version</RegistryValue>
+    <RegistryValue Name="DriverHuawei2">HKLM\SOFTWARE\Vodafone\VMB\Drivers\Huawei2:Version</RegistryValue>
+    <RegistryValue Name="DriverZte2Mass">HKLM\SOFTWARE\Vodafone\VMB\Drivers\Zte2:MassVersion</RegistryValue>
+    <RegistryValue Name="DriverZte2Ras">HKLM\SOFTWARE\Vodafone\VMB\Drivers\Zte2:RasVersion</RegistryValue>
+    <RegistryValue Name="DriverZte2Ndis51">HKLM\SOFTWARE\Vodafone\VMB\Drivers\Zte2:Ndis51Version</RegistryValue>
+    <RegistryValue Name="DriverZte2Ndis62">HKLM\SOFTWARE\Vodafone\VMB\Drivers\Zte2:Ndis62Version</RegistryValue>
+    <RegistryValue Name="DriverZte2Ndis62Version2">HKLM\SOFTWARE\Vodafone\VMB\Drivers\Zte2:Ndis62Version2</RegistryValue>
+    <RegistryValue Name="DriverZte3">HKLM\SOFTWARE\Vodafone\VMB\Drivers\Zte3:Version</RegistryValue>
+    <RegistryValue Name="DriverZte4">HKLM\SOFTWARE\Vodafone\VMB\Drivers\Zte4:Version</RegistryValue>
+    <RegistryValue Name="LibraryMbnsdk">HKLM\SOFTWARE\Vodafone\VMB\Dali\Mbnsdk:Version</RegistryValue>
+    <RegistryValue Name="LibraryQuickstartsdk">HKLM\SOFTWARE\Vodafone\VMB\Dali\Quickstartsdk:Version</RegistryValue>
+    <RegistryValue Name="LibrarySamsdk">HKLM\SOFTWARE\Vodafone\VMB\Dali\Samsdk:Version</RegistryValue>
+    <RegistryValue Name="LibraryVbdsdk">HKLM\SOFTWARE\Vodafone\VMB\Dali\Vbdsdk:Version</RegistryValue>
+  </LibraryAndDriverVersionDefinitions>
+  <!-- Launcher definitions -->
+  <LauncherDefinitions>
+    <RegistryValue Name="VfProd">HKLM\SOFTWARE\Vodafone\VMB:VF_PROD</RegistryValue>
+    <RegistryValue Name="SetupDirectory">HKLM\SOFTWARE\Vodafone\VMB:SetupDirectory</RegistryValue>
+    <RegistryValue Name="VodafoneProductCode">HKLM\SOFTWARE\Vodafone\VMB:VodafoneProductCode</RegistryValue>
+    <RegistryValue Name="VfProdPackage">HKLM\SOFTWARE\Vodafone\VMB:VF_PROD_PACKAGE</RegistryValue>
+    <RegistryValue Name="VfVendid">HKLM\SOFTWARE\Vodafone\Common:VF_VENDID</RegistryValue>
+    <RegistryValue Name="StartWhenDevicePluggedIn">HKCU\Software\Vodafone\VMB\LRU:StartWhenDevicePluggedIn</RegistryValue>
+    <Version Name="Algorithm2">10.3.100</Version>
+  </LauncherDefinitions>
+  <!-- Important GUIDs -->
+  <ImportantGuids>
+    <ImportantGuid>2C7089AA-2E0E-11D1-B114-00C04FC2AAE4</ImportantGuid>
+    <ImportantGuid>53F56308-B6BF-11D0-94F2-00A0C91EFB8B</ImportantGuid>
+    <ImportantGuid>86E0D1E0-8089-11D0-9CE4-08003E301F73</ImportantGuid>
+    <ImportantGuid>A5DCBF10-6530-11D2-901F-00C04FB951ED</ImportantGuid>
+    <ImportantGuid>AD498944-762F-11D0-8DCB-00C04FC3358C</ImportantGuid>
+    <ImportantGuid>DB567EC6-64C8-4847-BBFF-BF91CC18EA80</ImportantGuid>
+  </ImportantGuids>
+  <!-- Device manufacturers -->
+  <DeviceManufacturers>
+    <!-- Huawei -->
+    <DeviceManufacturer Name="Huawei" Launcher="">
+      <!-- Device families -->
+      <DeviceFamilies>
+        <!-- Huawei_1 -->
+        <DeviceFamily Type="Huawei_1">
+          <DeviceInstances>
+            <NotConverted Conversion="Huawei_1" Class="USB" Service="USBSTOR" Type="Huawei_1_usbstor" />
+            <NotConverted Conversion="Huawei_1" Class="USB" Service="usbccgp" Type="Huawei_1_usbccgp_notconverted" />
+            <CdRom Ancestry="OnceUp" Class="CDROM" Service="cdrom" Type="Huawei_1_cdrom" />
+            <Port Ancestry="None" Class="Ports" Service="ew_hwusbdev" Type="Huawei_1_ew_hwusbdev" />
+            <Composite Class="USB" Service="usbccgp" Type="Huawei_1_usbccgp_composite" />
+            <Modem Ancestry="OnceUp" Class="Modem" Service="Modem" Type="Huawei_1_modem">
+              <DeviceId>USB\VID_12D1&amp;SUBCLASS_01&amp;PROT_31</DeviceId>
+            </Modem>
+            <Port Ancestry="OnceUp" Class="Ports" Service="hwdatacard" Type="Huawei_1_hwdatacard">
+              <DeviceId>USB\VID_12D1&amp;SUBCLASS_01&amp;PROT_32</DeviceId>
+              <DeviceId>USB\VID_12D1&amp;SUBCLASS_01&amp;PROT_33</DeviceId>
+            </Port>
+            <Net Ancestry="OnceUp" Class="Net" Service="ewusbnet" Type="Huawei_1_ewusbnet">
+              <DeviceId>USB\VID_12D1&amp;SUBCLASS_01&amp;PROT_37</DeviceId>
+            </Net>
+          </DeviceInstances>
+        </DeviceFamily>
+        <!-- Huawei_2 -->
+        <DeviceFamily Type="Huawei_2">
+          <DeviceInstances>
+            <NotConverted Conversion="Huawei_1" Class="USB" Service="USBSTOR" Type="Huawei_2_usbstor" />
+            <NotConverted Conversion="Huawei_1" Class="USB" Service="usbccgp" Type="Huawei_2_usbccgp_notconverted" />
+            <Port Ancestry="None" Class="Ports" Service="ew_hwusbdev" Type="Huawei_2_ew_hwusbdev" />
+            <FakeComposite Class="USB" Service="usbccgp" Type="Huawei_2_usbccgp_fakecomposite" />
+            <Modem Ancestry="Fake" Class="Modem" Service="Modem" Type="Huawei_2_modem">
+              <DeviceId>USBCDCACM\VID_12D1&amp;SUBCLASS_02&amp;PROT_31</DeviceId>
+            </Modem>
+            <Port Ancestry="Fake" Class="Ports" Service="huawei_cdcacm" Type="Huawei_2_huawei_cdcacm">
+              <DeviceId>USBCDCACM\VID_12D1&amp;SUBCLASS_02&amp;PROT_32</DeviceId>
+              <DeviceId>USBCDCACM\VID_12D1&amp;SUBCLASS_02&amp;PROT_33</DeviceId>
+            </Port>
+            <Net OperatingSystem="XpOrVista" Ancestry="Fake" Class="Net" Service="huawei_cdcecm" Type="Huawei_2_huawei_cdcecm">
+              <DeviceId>USBCDCECM\VID_12D1&amp;SUBCLASS_02&amp;PROT_37</DeviceId>
+              <DeviceId>USBCDCNCM\VID_12D1&amp;SUBCLASS_02&amp;PROT_46</DeviceId>
+            </Net>
+            <Net OperatingSystem="Win7OrHigher" Ancestry="Fake" Class="Net" Service="huawei_wwanecm" Type="Huawei_2_huawei_wwanecm">
+              <DeviceId>USBCDCECM\VID_12D1&amp;SUBCLASS_02&amp;PROT_37&amp;WWAN</DeviceId>
+              <DeviceId>USBCDCNCM\VID_12D1&amp;SUBCLASS_02&amp;PROT_46&amp;WWAN</DeviceId>
+            </Net>
+          </DeviceInstances>
+        </DeviceFamily>
+        <!-- Huawei_3 -->
+        <DeviceFamily Type="Huawei_3">
+          <DeviceInstances>
+            <NotConverted Conversion="Huawei_1" Class="USB" Service="USBSTOR" Type="Huawei_3_usbstor" />
+            <Composite Class="USB" Service="usbccgp" Type="Huawei_3_usbccgp" />
+            <Net Ancestry="OnceUp" Class="Net" Service="usb_rndisx" Type="Huawei_3_usb_rndisx" />
+          </DeviceInstances>
+        </DeviceFamily>
+      </DeviceFamilies>
+      <!-- Devices -->
+      <Devices>
+        <!-- EM770W -->
+        <Device Reference="EM770W">
+          <DeviceInstances Family="Huawei_1">
+            <DeviceId Type="Huawei_1_usbccgp_composite">USB\VID_12D1&amp;PID_1487</DeviceId>
+            <DeviceId Type="Huawei_1_modem">USB\VID_12D1&amp;PID_1487&amp;MI_00</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1487&amp;MI_01</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1487&amp;MI_02</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1487&amp;MI_03</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1487&amp;MI_04</DeviceId>
+            <DeviceId Type="Huawei_1_ewusbnet">USB\VID_12D1&amp;PID_1487&amp;MI_05</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>EM770W</ModelName>
+            <Embedded>true</Embedded>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+        <!-- EM820W -->
+        <Device Reference="EM820W">
+          <DeviceInstances Family="Huawei_1">
+            <DeviceId Type="Huawei_1_usbccgp_composite">USB\VID_12D1&amp;PID_1488</DeviceId>
+            <DeviceId Type="Huawei_1_modem">USB\VID_12D1&amp;PID_1488&amp;MI_00</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1488&amp;MI_01</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1488&amp;MI_02</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1488&amp;MI_03</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1488&amp;MI_04</DeviceId>
+            <DeviceId Type="Huawei_1_ewusbnet">USB\VID_12D1&amp;PID_1488&amp;MI_05</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>EM820W</ModelName>
+            <Embedded>true</Embedded>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3765 -->
+        <Device Reference="K3765" Launcher="">
+          <!-- Device: K3765 (E1762V) -->
+          <DeviceInstances Family="Huawei_1">
+            <DeviceId Type="Huawei_1_usbstor" Launcher="">USB\VID_12D1&amp;PID_1520</DeviceId>
+            <DeviceId Type="Huawei_1_ew_hwusbdev">USB\VID_12D1&amp;PID_1520</DeviceId>
+            <DeviceId Type="Huawei_1_usbccgp_composite" Launcher="">USB\VID_12D1&amp;PID_1465</DeviceId>
+            <DeviceId Type="Huawei_1_modem">USB\VID_12D1&amp;PID_1465&amp;MI_00</DeviceId>
+            <DeviceId Type="Huawei_1_ewusbnet">USB\VID_12D1&amp;PID_1465&amp;MI_01</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1465&amp;MI_02</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1465&amp;MI_03</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3765</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">9.4.3</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3770 -->
+        <Device Reference="K3770" Launcher="">
+          <!-- Device: K3770 (E173) -->
+          <DeviceInstances Family="Huawei_2">
+            <DeviceId Type="Huawei_2_usbstor" Launcher="">USB\VID_12D1&amp;PID_14D1</DeviceId>
+            <DeviceId Type="Huawei_2_ew_hwusbdev">USB\VID_12D1&amp;PID_14D1</DeviceId>
+            <DeviceId Type="Huawei_2_usbccgp_fakecomposite" Launcher="">USB\VID_12D1&amp;PID_14C9</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3770</ModelName>
+            <ImsiSwitch>Huawei001</ImsiSwitch>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.2.100</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3771 -->
+        <Device Reference="K3771" Launcher="">
+          <DeviceInstances Family="Huawei_2">
+            <DeviceId Type="Huawei_2_usbstor" Launcher="">USB\VID_12D1&amp;PID_14C4</DeviceId>
+            <DeviceId Type="Huawei_2_ew_hwusbdev">USB\VID_12D1&amp;PID_14C4</DeviceId>
+            <DeviceId Type="Huawei_2_usbccgp_fakecomposite" Launcher="">USB\VID_12D1&amp;PID_14CA</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3771</ModelName>
+            <ImsiSwitch>Huawei001</ImsiSwitch>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.2.100</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3772 -->
+        <Device Reference="K3772" Launcher="">
+          <DeviceInstances Family="Huawei_2">
+            <DeviceId Type="Huawei_2_usbstor" Launcher="">USB\VID_12D1&amp;PID_1526</DeviceId>
+            <DeviceId Type="Huawei_2_ew_hwusbdev">USB\VID_12D1&amp;PID_1526</DeviceId>
+            <DeviceId Type="Huawei_2_usbccgp_fakecomposite" Launcher="">USB\VID_12D1&amp;PID_14CF</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3772</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.202</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.13</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.23.8.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3773 -->
+        <Device Reference="K3773" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f11" Launcher="">USB\VID_12D1&amp;PID_1F11</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_14BC</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3773</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.204</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.4.0</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3806 -->
+        <Device Reference="K3806" Launcher="">
+          <DeviceInstances Family="Huawei_2">
+            <DeviceId Type="Huawei_2_usbccgp_notconverted" Launcher="">USB\VID_12D1&amp;PID_14AD</DeviceId>
+            <DeviceId Type="Huawei_2_ew_hwusbdev">USB\VID_12D1&amp;PID_14AD</DeviceId>
+            <DeviceId Type="Huawei_2_usbccgp_fakecomposite" Launcher="">USB\VID_12D1&amp;PID_14AE</DeviceId>
+            <DeviceId Type="Huawei_2_huawei_cdcacm">USBCDCACM\VID_12D1&amp;PID_14AE&amp;MI_00</DeviceId>
+            <DeviceId Type="Huawei_2_huawei_cdcecm">USBCDCECM\VID_12D1&amp;PID_14AE&amp;MI_01</DeviceId>
+            <DeviceId Type="Huawei_2_huawei_wwanecm">USBCDCECM\VID_12D1&amp;PID_14AE&amp;MI_01&amp;WWAN</DeviceId>
+            <DeviceId Type="Huawei_2_modem">USBCDCACM\VID_12D1&amp;PID_14AE&amp;MI_02</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3806</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.1.104</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4201 -->
+        <Device Reference="K4201" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f17" Launcher="">USB\VID_12D1&amp;PID_1F17</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_1576</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4201</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.301</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.5.2</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4202 -->
+        <Device Reference="K4202" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f18" Launcher="">USB\VID_12D1&amp;PID_1F18</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_1577</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4202</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.301</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.5.2</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4203 -->
+        <Device Reference="K4203" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f1c" Launcher="">USB\VID_12D1&amp;PID_1F1C</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_1590</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4203</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4305 -->
+        <Device Reference="K4305" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f15" Launcher="">USB\VID_12D1&amp;PID_1F15</DeviceId>
+            <DeviceId Type="Huawei_3_usbccgp">USB\VID_12D1&amp;PID_14F7</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_1400</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_14F7&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4305</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.205</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.4.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4505 -->
+        <Device Reference="K4505" Launcher="">
+          <DeviceInstances Family="Huawei_1">
+            <DeviceId Type="Huawei_1_usbccgp_notconverted" Launcher="">USB\VID_12D1&amp;PID_1521</DeviceId>
+            <DeviceId Type="Huawei_1_ew_hwusbdev">USB\VID_12D1&amp;PID_1521</DeviceId>
+            <DeviceId Type="Huawei_1_usbccgp_composite" Launcher="">USB\VID_12D1&amp;PID_1464</DeviceId>
+            <DeviceId Type="Huawei_1_modem">USB\VID_12D1&amp;PID_1464&amp;MI_00</DeviceId>
+            <DeviceId Type="Huawei_1_ewusbnet">USB\VID_12D1&amp;PID_1464&amp;MI_01</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1464&amp;MI_02</DeviceId>
+            <DeviceId Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;PID_1464&amp;MI_03</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4505</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">9.4.4</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4510 -->
+        <Device Reference="K4510" Launcher="">
+          <DeviceInstances Family="Huawei_1">
+            <DeviceId Type="Huawei_1_usbccgp_notconverted" Launcher="">USB\VID_12D1&amp;PID_14C5</DeviceId>
+            <DeviceId Type="Huawei_1_ew_hwusbdev">USB\VID_12D1&amp;PID_14C5</DeviceId>
+            <DeviceId Type="Huawei_1_usbccgp_composite" Launcher="">USB\VID_12D1&amp;PID_14CB</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4510</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.2.100</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4511 -->
+        <Device Reference="K4511" Launcher="">
+          <DeviceInstances Family="Huawei_1">
+            <DeviceId Type="Huawei_1_usbccgp_notconverted" Launcher="">USB\VID_12D1&amp;PID_14B7</DeviceId>
+            <DeviceId Type="Huawei_1_ew_hwusbdev">USB\VID_12D1&amp;PID_14B7</DeviceId>
+            <DeviceId Type="Huawei_1_usbccgp_composite" Launcher="">USB\VID_12D1&amp;PID_14CC</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4511</ModelName>
+            <ImsiSwitch>Huawei001</ImsiSwitch>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.2.100</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4605 -->
+        <Device Reference="K4605" Launcher="">
+          <DeviceInstances Family="Huawei_1">
+            <DeviceId Type="Huawei_1_usbccgp_notconverted" Launcher="">USB\VID_12D1&amp;PID_14C1</DeviceId>
+            <DeviceId Type="Huawei_1_ew_hwusbdev">USB\VID_12D1&amp;PID_14C1</DeviceId>
+            <DeviceId Type="Huawei_1_usbccgp_composite" Launcher="">USB\VID_12D1&amp;PID_14C6</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4605</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.1.100</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4606 -->
+        <Device Reference="K4606" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f19" Launcher="">USB\VID_12D1&amp;PID_1F19</DeviceId>
+            <DeviceId Type="Huawei_3_usbccgp">USB\VID_12D1&amp;PID_14FA</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_1578</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_14FA&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4606</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.401</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.5.4</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K5005 -->
+        <Device Reference="K5005" Launcher="">
+          <DeviceInstances Family="Huawei_1">
+            <DeviceId Type="Huawei_1_usbccgp_notconverted" Launcher="">USB\VID_12D1&amp;PID_14C3</DeviceId>
+            <DeviceId Type="Huawei_1_ew_hwusbdev">USB\VID_12D1&amp;PID_14C3</DeviceId>
+            <DeviceId Type="Huawei_1_usbccgp_composite" Launcher="">USB\VID_12D1&amp;PID_14C8</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K5005</ModelName>
+            <ImsiSwitch>Huawei001</ImsiSwitch>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.0</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.9</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverHuawei1">4.21.19.11</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K5150 -->
+        <Device Reference="K5150" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f16" Launcher="">USB\VID_12D1&amp;PID_1F16</DeviceId>
+            <DeviceId Type="Huawei_3_usbccgp">USB\VID_12D1&amp;PID_14F8</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_1575</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_14F8&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K5150</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.301</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.5.2</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Huawei_3_reserved_1 -->
+        <Device Reference="Huawei_3_reserved_1" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f1b" Launcher="">USB\VID_12D1&amp;PID_1F1B</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_1579</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>Huawei_3_reserved_1</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Huawei_3_reserved_3 -->
+        <Device Reference="Huawei_3_reserved_3" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f1d" Launcher="">USB\VID_12D1&amp;PID_1F1D</DeviceId>
+            <DeviceId Type="Huawei_3_usbccgp">USB\VID_12D1&amp;PID_157B</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_1591</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_157B&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>Huawei_3_reserved_3</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Huawei_3_reserved_4 -->
+        <Device Reference="Huawei_3_reserved_4" Launcher="">
+          <DeviceInstances Family="Huawei_3">
+            <DeviceId Type="Huawei_3_usbstor" Special="/pid= 1f1e" Launcher="">USB\VID_12D1&amp;PID_1F1E</DeviceId>
+            <DeviceId Type="Huawei_3_usbccgp">USB\VID_12D1&amp;PID_157F</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_1592</DeviceId>
+            <DeviceId Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;PID_157F&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>Huawei_3_reserved_4</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/html/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/html/home.htm?startPage=account</Account>
+              <Settings>http://{0}/html/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/html/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Unknown_1 -->
+        <Device Reference="Unknown_1">
+          <DeviceInstances>
+            <DeviceIdPattern Type="Huawei_1_usbstor">USB\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_1_cdrom">USBSTOR\CDROM&amp;VEN_HUAWEI</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_1_ew_hwusbdev">USB\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_1_usbccgp_composite">USB\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_1_modem">USB\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_1_hwdatacard">USB\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_1_ewusbnet">USB\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_2_modem">USBCDCACM\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_2_huawei_cdcacm">USBCDCACM\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_2_huawei_cdcecm">USBCDCECM\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_2_huawei_wwanecm">USBCDCECM\VID_12D1&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Huawei_3_usb_rndisx">USB\VID_12D1&amp;</DeviceIdPattern>
+          </DeviceInstances>
+          <ExtraInformation>
+            <Unknown>true</Unknown>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+      </Devices>
+    </DeviceManufacturer>
+    <!-- Zte -->
+    <DeviceManufacturer Name="Zte" Launcher="">
+      <!-- Device families -->
+      <DeviceFamilies>
+        <!-- Zte_1 -->
+        <DeviceFamily Type="Zte_1">
+          <DeviceInstances>
+            <NotConverted Conversion="Zte_1" Class="USB" Service="USBSTOR" Type="Zte_1_usbstor" />
+            <CdRom Ancestry="OnceUp" Class="CDROM" Service="cdrom" Type="Zte_1_cdrom" />
+            <Composite Class="USB" Service="usbccgp" Type="Zte_1_usbccgp" />
+            <Modem Ancestry="OnceUp" Class="Modem" Service="Modem" Type="Zte_1_modem" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="ZTEusbser6k" Type="Zte_1_zteusbser6k" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="ZTEusbnmea" Type="Zte_1_zteusbnmea" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="ZTEusbvoice" Type="Zte_1_zteusbvoice" />
+            <Net OperatingSystem="XpOrVista" Ancestry="OnceUp" Class="Net" Service="ZTEusbnet" Type="Zte_1_zteusbnet" />
+            <Net OperatingSystem="Win7OrHigher" Ancestry="OnceUp" Class="Net" Service="ZTEusbwwan" Type="Zte_1_zteusbwwan" />
+          </DeviceInstances>
+        </DeviceFamily>
+        <!-- Zte_2 -->
+        <DeviceFamily Type="Zte_2">
+          <DeviceInstances>
+            <NotConverted Conversion="None" Class="USB" Service="USBSTOR" Type="Zte_2_usbstor" />
+            <FakeComposite Class="USB" Service="usbccgp" Type="Zte_2_usbccgp" />
+            <Modem Ancestry="Fake" Class="Modem" Service="Modem" Type="Zte_2_modem" />
+            <Port Ancestry="Fake" Class="Ports" Service="vodafone_K3805-z_cdc_acm" Type="Zte_2_vodafone_k3805_z_cdc_acm" />
+            <Net Ancestry="Fake" Class="Net" Service="vodafone_K3805-z_cdc_ecm" Type="Zte_2_vodafone_k3805_z_cdc_ecm" />
+          </DeviceInstances>
+        </DeviceFamily>
+        <!-- Zte_3 -->
+        <DeviceFamily Type="Zte_3">
+          <DeviceInstances>
+            <NotConverted Conversion="None" Class="USB" Service="USBSTOR" Type="Zte_3_usbstor" />
+            <Composite Class="USB" Service="usbccgp" Type="Zte_3_usbccgp" />
+            <Modem Ancestry="OnceUp" Class="Modem" Service="Modem" Type="Zte_3_modem" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="vodafone_zte_cdc_acm" Type="Zte_3_vodafone_zte_cdc_acm" />
+            <Net Ancestry="TwiceUp" Class="Net" Service="vodafone_zte_cdc_ecm" Type="Zte_3_vodafone_zte_cdc_ecm" />
+          </DeviceInstances>
+        </DeviceFamily>
+        <!-- Zte_4 -->
+        <DeviceFamily Type="Zte_4">
+          <DeviceInstances>
+            <NotConverted Conversion="Zte_1" Class="USB" Service="USBSTOR" Type="Zte_4_usbstor" />
+            <Composite Class="USB" Service="usbccgp" Type="Zte_4_usbccgp" />
+            <Modem Ancestry="OnceUp" Class="Modem" Service="Modem" Type="Zte_4_modem" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="zgdcdiag" Type="Zte_4_zgdcdiag" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="zgdcat" Type="Zte_4_zgdcat" />
+            <Net Ancestry="OnceUp" Class="Net" Service="zgdcwwan" Type="Zte_4_zgdcwwan" />
+          </DeviceInstances>
+        </DeviceFamily>
+        <!-- Zte_5 -->
+        <DeviceFamily Type="Zte_5">
+          <DeviceInstances>
+            <NotConverted Conversion="Zte_2" Class="USB" Service="USBSTOR" Type="Zte_5_usbstor" />
+            <Composite Class="USB" Service="usbccgp" Type="Zte_5_usbccgp" />
+            <Net Ancestry="OnceUp" Class="Net" Service="usb_rndisx" Type="Zte_5_usb_rndisx" />
+          </DeviceInstances>
+        </DeviceFamily>
+      </DeviceFamilies>
+      <!-- Devices -->
+      <Devices>
+        <!-- K3565-Z -->
+        <Device Reference="K3565-Z" Launcher="">
+          <DeviceInstances Family="Zte_1">
+            <DeviceInstanceId Type="Zte_1_usbstor" Launcher="">USB\VID_19D2&amp;PID_2000\P673A2VDF_MS</DeviceInstanceId>
+            <DeviceId Type="Zte_1_usbccgp" Launcher="">USB\VID_19D2&amp;PID_0063</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3565-Z</ModelName>
+            <ImsiSwitch>Zte3G</ImsiSwitch>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">9.3.7</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Mass">1.0.0.12</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ras">12.2059.0.3</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ndis51">2.1040.0.6</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3570-Z -->
+        <Device Reference="K3570-Z" Launcher="">
+          <DeviceInstances Family="Zte_1">
+            <DeviceId Type="Zte_1_usbstor" Launcher="">USB\VID_19D2&amp;PID_1007</DeviceId>
+            <DeviceId Type="Zte_1_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1008</DeviceId>
+            <DeviceId Type="Zte_1_modem">USB\VID_19D2&amp;PID_1008&amp;MI_03</DeviceId>
+            <DeviceId Type="Zte_1_zteusbser6k">USB\VID_19D2&amp;PID_1008&amp;MI_00</DeviceId>
+            <DeviceId Type="Zte_1_zteusbnmea">USB\VID_19D2&amp;PID_1008&amp;MI_01</DeviceId>
+            <DeviceId Type="Zte_1_zteusbvoice">USB\VID_19D2&amp;PID_1008&amp;MI_02</DeviceId>
+            <DeviceId Type="Zte_1_zteusbnet">USB\VID_19D2&amp;PID_1008&amp;MI_04</DeviceId>
+            <DeviceId Type="Zte_1_zteusbwwan">USB\VID_19D2&amp;PID_1008&amp;MI_04</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3570-Z</ModelName>
+            <ImsiSwitch>Zte3G</ImsiSwitch>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.0.200</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Mass">1.0.0.12</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ras">12.2059.0.3</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ndis51">2.1040.0.6</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3571-Z -->
+        <Device Reference="K3571-Z" Launcher="">
+          <DeviceInstances Family="Zte_1">
+            <DeviceId Type="Zte_1_usbstor" Launcher="">USB\VID_19D2&amp;PID_1009</DeviceId>
+            <DeviceId Type="Zte_1_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1010</DeviceId>
+            <DeviceId Type="Zte_1_modem">USB\VID_19D2&amp;PID_1010&amp;MI_03</DeviceId>
+            <DeviceId Type="Zte_1_zteusbser6k">USB\VID_19D2&amp;PID_1010&amp;MI_00</DeviceId>
+            <DeviceId Type="Zte_1_zteusbnmea">USB\VID_19D2&amp;PID_1010&amp;MI_01</DeviceId>
+            <DeviceId Type="Zte_1_zteusbvoice">USB\VID_19D2&amp;PID_1010&amp;MI_02</DeviceId>
+            <DeviceId Type="Zte_1_zteusbnet">USB\VID_19D2&amp;PID_1010&amp;MI_04</DeviceId>
+            <DeviceId Type="Zte_1_zteusbwwan">USB\VID_19D2&amp;PID_1010&amp;MI_04</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3571-Z</ModelName>
+            <ImsiSwitch>Zte3G</ImsiSwitch>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.0.200</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Mass">1.0.0.12</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ras">12.2059.0.3</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ndis51">2.1040.0.6</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3765-Z -->
+        <Device Reference="K3765-Z" Launcher="">
+          <DeviceInstances Family="Zte_1">
+            <DeviceId Type="Zte_1_usbstor" Launcher="">USB\VID_19D2&amp;PID_0100</DeviceId>
+            <DeviceInstanceId Type="Zte_1_usbstor" Launcher="">USB\VID_19D2&amp;PID_2000\P673A1VDF_MS</DeviceInstanceId>
+            <DeviceId Type="Zte_1_usbccgp" Launcher="">USB\VID_19D2&amp;PID_2002</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3765-Z</ModelName>
+            <ImsiSwitch>Zte3G</ImsiSwitch>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">9.4.2</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Mass">1.0.0.12</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ras">12.2059.0.3</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ndis51">2.1040.0.6</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3770-Z -->
+        <Device Reference="K3770-Z" Launcher="">
+          <DeviceInstances Family="Zte_3">
+            <DeviceId Type="Zte_3_usbstor" Launcher="">USB\VID_19D2&amp;PID_1175</DeviceId>
+            <DeviceId Type="Zte_3_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1176</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3770-Z</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.2.301</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte3">5.39.27</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3772-Z -->
+        <Device Reference="K3772-Z" Launcher="">
+          <DeviceInstances Family="Zte_3">
+            <DeviceId Type="Zte_3_usbstor" Launcher="">USB\VID_19D2&amp;PID_1179</DeviceId>
+            <DeviceId Type="Zte_3_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1180</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3772-Z</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.2.301</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte3">5.39.27</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3805-Z -->
+        <Device Reference="K3805-Z" Launcher="">
+          <DeviceInstances Family="Zte_2">
+            <DeviceId Type="Zte_2_usbstor" Launcher="">USB\VID_19D2&amp;PID_1001</DeviceId>
+            <DeviceId Type="Zte_2_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1002</DeviceId>
+            <DeviceId Type="Zte_2_modem">USBCDCACM\VID_19D2&amp;PID_1002&amp;MI_00</DeviceId>
+            <DeviceId Type="Zte_2_vodafone_k3805_z_cdc_acm">USBCDCACM\VID_19D2&amp;PID_1002&amp;MI_02</DeviceId>
+            <DeviceId Type="Zte_2_vodafone_k3805_z_cdc_acm">USBCDCOBEX\VID_19D2&amp;PID_1002&amp;MI_07</DeviceId>
+            <DeviceId Type="Zte_2_vodafone_k3805_z_cdc_ecm">USBCDCECM\VID_19D2&amp;PID_1002&amp;MI_04</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3805-Z</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">9.4.7</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte3">5.39.27</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K3806-Z -->
+        <Device Reference="K3806-Z" Launcher="">
+          <DeviceInstances Family="Zte_2">
+            <DeviceId Type="Zte_2_usbstor" Launcher="">USB\VID_19D2&amp;PID_1013</DeviceId>
+            <DeviceId Type="Zte_2_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1014</DeviceId>
+            <DeviceId Type="Zte_2_modem">USBCDCACM\VID_19D2&amp;PID_1014&amp;MI_00</DeviceId>
+            <DeviceId Type="Zte_2_vodafone_k3805_z_cdc_acm">USBCDCACM\VID_19D2&amp;PID_1014&amp;MI_02</DeviceId>
+            <DeviceId Type="Zte_2_vodafone_k3805_z_cdc_acm">USBCDCOBEX\VID_19D2&amp;PID_1014&amp;MI_07</DeviceId>
+            <DeviceId Type="Zte_2_vodafone_k3805_z_cdc_ecm">USBCDCECM\VID_19D2&amp;PID_1014&amp;MI_04</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K3806-Z</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.1.0</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte3">5.39.27</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4201-Z -->
+        <Device Reference="K4201-Z" Launcher="">
+          <DeviceInstances Family="Zte_5">
+            <DeviceId Type="Zte_5_usbstor" Launcher="">USB\VID_19D2&amp;PID_1022</DeviceId>
+            <DeviceId Type="Zte_5_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1023</DeviceId>
+            <DeviceId Type="Zte_5_usb_rndisx">USB\VID_19D2&amp;PID_1023&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4201-Z</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/home.htm?startPage=account</Account>
+              <Settings>http://{0}/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.301</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.5.2</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4505-Z -->
+        <Device Reference="K4505-Z" Launcher="">
+          <DeviceInstances Family="Zte_1">
+            <DeviceId Type="Zte_1_usbstor" Launcher="">USB\VID_19D2&amp;PID_0101</DeviceId>
+            <DeviceId Type="Zte_1_usbccgp" Launcher="">USB\VID_19D2&amp;PID_0104</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4505-Z</ModelName>
+            <ImsiSwitch>Zte3G</ImsiSwitch>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">9.4.4</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Mass">1.0.0.12</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ras">12.2059.0.3</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ndis51">2.1040.0.6</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K4510-Z -->
+        <Device Reference="K4510-Z" Launcher="">
+          <DeviceInstances Family="Zte_3">
+            <DeviceId Type="Zte_3_usbstor" Launcher="">USB\VID_19D2&amp;PID_1171</DeviceId>
+            <DeviceId Type="Zte_3_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1172</DeviceId>
+            <DeviceId Type="Zte_3_modem">USB\VID_19D2&amp;PID_1172&amp;MI_00</DeviceId>
+            <DeviceId Type="Zte_3_vodafone_zte_cdc_acm">USB\VID_19D2&amp;PID_1172&amp;MI_02</DeviceId>
+            <DeviceId Type="Zte_3_vodafone_zte_cdc_acm">USB\VID_19D2&amp;PID_1172&amp;MI_04</DeviceId>
+            <DeviceId Type="Zte_3_vodafone_zte_cdc_acm">USB\VID_19D2&amp;PID_1172&amp;MI_09</DeviceId>
+            <DeviceId Type="Zte_3_vodafone_zte_cdc_ecm">USBCDCECM\VID_19D2&amp;PID_1172&amp;MI_06</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K4510-Z</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.2.200</MinimalVersion>
+              <MaximalVersion RegistryValue="BuildVersion">10.3.0</MaximalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.21</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte3">5.39.27</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K5006-Z -->
+        <Device Reference="K5006-Z" Launcher="">
+          <DeviceInstances Family="Zte_4">
+            <DeviceId Type="Zte_4_usbstor" Launcher="">USB\VID_19D2&amp;PID_1017</DeviceId>
+            <DeviceId Type="Zte_4_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1018</DeviceId>
+            <DeviceId Type="Zte_4_modem">USB\VID_19D2&amp;PID_1018&amp;MI_02</DeviceId>
+            <DeviceId Type="Zte_4_zgdcdiag">USB\VID_19D2&amp;PID_1018&amp;MI_00</DeviceId>
+            <DeviceId Type="Zte_4_zgdcat">USB\VID_19D2&amp;PID_1018&amp;MI_01</DeviceId>
+            <DeviceId Type="Zte_4_zgdcwwan">USB\VID_19D2&amp;PID_1018&amp;MI_03</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K5006-Z</ModelName>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Vbdsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.203</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryVbdsdk">1.0.14</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Mass">1.0.0.17</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ras">12.2088.0.1</MinimalVersion>
+              <MinimalVersion RegistryValue="DriverZte2Ndis51">2.1069.0.3</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- K5008-Z -->
+        <Device Reference="K5008-Z" Launcher="">
+          <DeviceInstances Family="Zte_5">
+            <DeviceId Type="Zte_5_usbstor" Launcher="">USB\VID_19D2&amp;PID_1030</DeviceId>
+            <DeviceId Type="Zte_5_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1031</DeviceId>
+            <DeviceId Type="Zte_5_usb_rndisx">USB\VID_19D2&amp;PID_1031&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>K5008-Z</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/home.htm?startPage=account</Account>
+              <Settings>http://{0}/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.401</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.5.4</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Zte_5_reserved_1 -->
+        <Device Reference="Zte_5_reserved_1" Launcher="">
+          <DeviceInstances Family="Zte_5">
+            <DeviceId Type="Zte_5_usbstor" Launcher="">USB\VID_19D2&amp;PID_1038</DeviceId>
+            <DeviceId Type="Zte_5_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1039</DeviceId>
+            <DeviceId Type="Zte_5_usb_rndisx">USB\VID_19D2&amp;PID_1039&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>Zte_5_reserved_1</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/home.htm?startPage=account</Account>
+              <Settings>http://{0}/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Zte_5_reserved_2 -->
+        <Device Reference="Zte_5_reserved_2" Launcher="">
+          <DeviceInstances Family="Zte_5">
+            <DeviceId Type="Zte_5_usbstor" Launcher="">USB\VID_19D2&amp;PID_1046</DeviceId>
+            <DeviceId Type="Zte_5_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1047</DeviceId>
+            <DeviceId Type="Zte_5_usb_rndisx">USB\VID_19D2&amp;PID_1047&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>Zte_5_reserved_2</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/home.htm?startPage=account</Account>
+              <Settings>http://{0}/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Zte_5_reserved_3 -->
+        <Device Reference="Zte_5_reserved_3" Launcher="">
+          <DeviceInstances Family="Zte_5">
+            <DeviceId Type="Zte_5_usbstor" Launcher="">USB\VID_19D2&amp;PID_1054</DeviceId>
+            <DeviceId Type="Zte_5_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1055</DeviceId>
+            <DeviceId Type="Zte_5_usb_rndisx">USB\VID_19D2&amp;PID_1055&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>Zte_5_reserved_3</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/home.htm?startPage=account</Account>
+              <Settings>http://{0}/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Zte_5_reserved_4 -->
+        <Device Reference="Zte_5_reserved_4" Launcher="">
+          <DeviceInstances Family="Zte_5">
+            <DeviceId Type="Zte_5_usbstor" Launcher="">USB\VID_19D2&amp;PID_1063</DeviceId>
+            <DeviceId Type="Zte_5_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1064</DeviceId>
+            <DeviceId Type="Zte_5_usb_rndisx">USB\VID_19D2&amp;PID_1064&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>Zte_5_reserved_4</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/home.htm?startPage=account</Account>
+              <Settings>http://{0}/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Zte_5_reserved_5 -->
+        <Device Reference="Zte_5_reserved_5" Launcher="">
+          <DeviceInstances Family="Zte_5">
+            <DeviceId Type="Zte_5_usbstor" Launcher="">USB\VID_19D2&amp;PID_1071</DeviceId>
+            <DeviceId Type="Zte_5_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1072</DeviceId>
+            <DeviceId Type="Zte_5_usb_rndisx">USB\VID_19D2&amp;PID_1072&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>Zte_5_reserved_5</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/home.htm?startPage=account</Account>
+              <Settings>http://{0}/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Zte_5_reserved_6 -->
+        <Device Reference="Zte_5_reserved_6" Launcher="">
+          <DeviceInstances Family="Zte_5">
+            <DeviceId Type="Zte_5_usbstor" Launcher="">USB\VID_19D2&amp;PID_1079</DeviceId>
+            <DeviceId Type="Zte_5_usbccgp" Launcher="">USB\VID_19D2&amp;PID_1080</DeviceId>
+            <DeviceId Type="Zte_5_usb_rndisx">USB\VID_19D2&amp;PID_1080&amp;MI_00</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>Zte_5_reserved_6</ModelName>
+            <WebUi>
+              <Home>http://{0}/</Home>
+              <Sms>http://{0}/home.htm?startPage=sms-inbox</Sms>
+              <Account>http://{0}/home.htm?startPage=account</Account>
+              <Settings>http://{0}/home.htm?startPage=network-settings</Settings>
+              <Help>http://{0}/home.htm?startPage=help</Help>
+              <Locked>http://{0}/</Locked>
+            </WebUi>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Quickstartsdk">
+              <MinimalVersion RegistryValue="BuildVersion">10.3.405</MinimalVersion>
+              <MinimalVersion RegistryValue="LibraryQuickstartsdk">1.6.1</MinimalVersion>
+            </Option>
+          </Support>
+        </Device>
+        <!-- Unknown_1 -->
+        <Device Reference="Unknown_1">
+          <DeviceInstances>
+            <DeviceIdPattern Type="Zte_1_cdrom">USBSTOR\CDROM&amp;VEN_ZTE</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_1_usbccgp">USB\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_1_modem">USB\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_1_zteusbser6k">USB\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_1_zteusbnmea">USB\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_1_zteusbvoice">USB\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_1_zteusbnet">USB\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_1_zteusbwwan">USB\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_2_modem">USBCDCACM\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_2_vodafone_k3805_z_cdc_acm">USBCDCACM\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_2_vodafone_k3805_z_cdc_acm">USBCDCOBEX\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_2_vodafone_k3805_z_cdc_ecm">USBCDCECM\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_3_vodafone_zte_cdc_acm">USB\VID_19D2&amp;</DeviceIdPattern>
+            <DeviceIdPattern Type="Zte_3_vodafone_zte_cdc_ecm">USBCDCECM\VID_19D2&amp;</DeviceIdPattern>
+          </DeviceInstances>
+          <ExtraInformation>
+            <Unknown>true</Unknown>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+      </Devices>
+    </DeviceManufacturer>
+    <!-- Samsung -->
+    <DeviceManufacturer Name="Samsung">
+      <!-- Device families -->
+      <DeviceFamilies>
+        <!-- Samsung_1 -->
+        <DeviceFamily Type="Samsung_1">
+          <DeviceInstances>
+            <FakeComposite Class="USB" Service="usbccgp" Type="Samsung_1_usbccgp" />
+            <Modem Ancestry="Fake" Class="Modem" Service="Modem" Type="Samsung_1_modem" />
+            <Port Ancestry="Fake" Class="Ports" Service="samsung_hspa_datacard_cdc_acm" Type="Samsung_1_samsung_hspa_datacard_cdc_acm" />
+            <Net Ancestry="Fake" Class="Net" Service="samsung_hspa_datacard_cdc_ecm" Type="Samsung_1_samsung_hspa_datacard_cdc_ecm" />
+          </DeviceInstances>
+        </DeviceFamily>
+        <!-- Samsung_2 -->
+        <DeviceFamily Type="Samsung_2">
+          <DeviceInstances>
+            <Composite Class="USB" Service="usbccgp" Type="Samsung_2_usbccgp" />
+            <Modem Ancestry="OnceUp" Class="Modem" Service="Modem" Type="Samsung_2_modem" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="samsung_y3400_cdc_acm" Type="Samsung_2_samsung_y3400_cdc_acm" />
+            <Net Ancestry="TwiceUp" Class="Net" Service="samsung_y3400_cdc_ecm" Type="Samsung_2_samsung_y3400_cdc_ecm" />
+          </DeviceInstances>
+        </DeviceFamily>
+      </DeviceFamilies>
+      <!-- Devices -->
+      <Devices>
+        <!-- GT-Y3300 -->
+        <Device Reference="GT-Y3300">
+          <DeviceInstances Family="Samsung_1">
+            <DeviceId Type="Samsung_1_usbccgp">USB\VID_04E8&amp;PID_6872</DeviceId>
+            <DeviceId Type="Samsung_1_modem">USBCDCACM\VID_04E8&amp;PID_6872&amp;MI_00</DeviceId>
+            <DeviceId Type="Samsung_1_samsung_hspa_datacard_cdc_acm">USBCDCACM\VID_04E8&amp;PID_6872&amp;MI_02</DeviceId>
+            <DeviceId Type="Samsung_1_samsung_hspa_datacard_cdc_acm">USBCDCACM\VID_04E8&amp;PID_6872&amp;MI_04</DeviceId>
+            <DeviceId Type="Samsung_1_samsung_hspa_datacard_cdc_ecm">USBCDCECM\VID_04E8&amp;PID_6872&amp;MI_06</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>GT-Y3300</ModelName>
+            <Embedded>true</Embedded>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Samsdk">
+              <MinimalVersion RegistryValue="LibrarySamsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+        <!-- GT-Y3400 -->
+        <Device Reference="GT-Y3400">
+          <DeviceInstances Family="Samsung_2">
+            <DeviceId Type="Samsung_2_usbccgp">USB\VID_04E8&amp;PID_6906</DeviceId>
+            <DeviceId Type="Samsung_2_modem">USB\VID_04E8&amp;PID_6906&amp;MI_00</DeviceId>
+            <DeviceId Type="Samsung_2_samsung_y3400_cdc_acm">USB\VID_04E8&amp;PID_6906&amp;MI_02</DeviceId>
+            <DeviceId Type="Samsung_2_samsung_y3400_cdc_acm">USB\VID_04E8&amp;PID_6906&amp;MI_04</DeviceId>
+            <DeviceId Type="Samsung_2_samsung_y3400_cdc_ecm">USBCDCECM\VID_04E8&amp;PID_6906&amp;MI_06</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>GT-Y3400</ModelName>
+            <Embedded>true</Embedded>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+      </Devices>
+    </DeviceManufacturer>
+    <!-- Dell -->
+    <DeviceManufacturer Name="Dell">
+      <!-- Device families -->
+      <DeviceFamilies>
+        <!-- Dell_1 -->
+        <DeviceFamily Type="Dell_1">
+          <DeviceInstances>
+            <Modem Ancestry="OnceUp" Class="Modem" Service="Modem" Type="Dell_1_modem" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="Mbm3DevMt" Type="Dell_1_mbm3devmt" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="d554gps" Type="Dell_1_d554gps" />
+            <Net Ancestry="TwiceUp" Class="Net" Service="WwanUsbServ" Type="Dell_1_wwanusbserv" />
+          </DeviceInstances>
+        </DeviceFamily>
+      </DeviceFamilies>
+      <!-- Devices -->
+      <Devices>
+        <!-- 5530 -->
+        <Device Reference="5530">
+          <DeviceInstances Family="Dell_1">
+            <DeviceId Type="Dell_1_modem">USB\VID_413C&amp;PID_8147&amp;MI_03</DeviceId>
+            <DeviceId Type="Dell_1_mbm3devmt">USB\VID_413C&amp;PID_8147&amp;MI_05</DeviceId>
+            <DeviceId Type="Dell_1_d554gps">DELL\GPS2</DeviceId>
+            <DeviceId Type="Dell_1_wwanusbserv">USB\VID_413C&amp;PID_8147&amp;REV_0000&amp;MI_07&amp;OS_NT&amp;WWAN</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>5530</ModelName>
+            <Embedded>true</Embedded>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+      </Devices>
+    </DeviceManufacturer>
+    <!-- Ericsson -->
+    <DeviceManufacturer Name="Ericsson">
+      <!-- Device families -->
+      <DeviceFamilies>
+        <!-- Ericsson_1 -->
+        <DeviceFamily Type="Ericsson_1">
+          <DeviceInstances>
+            <Composite Class="USB" Service="usbccgp" Type="Ericsson_1_usbccgp" />
+            <Modem Ancestry="OnceUp" Class="Modem" Service="Modem" Type="Ericsson_1_modem" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="Mbm3DevMt" Type="Ericsson_1_mbm3devmt" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="l36wgps" Type="Ericsson_1_l36wgps" />
+            <Net Ancestry="TwiceUp" Class="Net" Service="WwanUsbServ" Type="Ericsson_1_wwanusbserv" />
+          </DeviceInstances>
+        </DeviceFamily>
+      </DeviceFamilies>
+      <!-- Devices -->
+      <Devices>
+        <!-- H5321 gw -->
+        <Device Reference="H5321gw">
+          <DeviceInstances Family="Ericsson_1">
+            <DeviceId Type="Ericsson_1_usbccgp">USB\VID_0BDB&amp;PID_1926</DeviceId>
+            <DeviceId Type="Ericsson_1_modem">USB\VID_0BDB&amp;PID_1926&amp;MI_03</DeviceId>
+            <DeviceId Type="Ericsson_1_mbm3devmt">USB\VID_0BDB&amp;PID_1926&amp;MI_05</DeviceId>
+            <DeviceId Type="Ericsson_1_l36wgps">ERICSSON\GPS</DeviceId>
+            <DeviceId Type="Ericsson_1_wwanusbserv">USB\VID_0BDB&amp;PID_1926&amp;REV_0000&amp;MI_06&amp;OS_NT&amp;WWAN</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>H5321gw</ModelName>
+            <Embedded>true</Embedded>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+      </Devices>
+    </DeviceManufacturer>
+    <!-- Hp -->
+    <DeviceManufacturer Name="Hp">
+      <!-- Device families -->
+      <DeviceFamilies>
+        <!-- Hp_1 -->
+        <DeviceFamily Type="Hp_1">
+          <DeviceInstances>
+            <FakeComposite Class="USB" Service="usbccgp" Type="Hp_1_usbccgp" />
+            <Modem Ancestry="Fake" Class="Modem" Service="Modem" Type="Hp_1_modem" />
+            <Port Ancestry="Fake" Class="Ports" Service="huawei_cdcacm" Type="Hp_1_huawei_cdcacm" />
+            <Net Ancestry="Fake" Class="Net" Service="huawei_wwanecm" Type="Hp_1_huawei_wwanecm" />
+          </DeviceInstances>
+        </DeviceFamily>
+      </DeviceFamilies>
+      <!-- Devices -->
+      <Devices>
+        <!-- HS3110 -->
+        <Device Reference="HS3110">
+          <DeviceInstances Family="Hp_1">
+            <DeviceId Type="Hp_1_usbccgp">USB\VID_03F0&amp;PID_521D</DeviceId>
+            <DeviceId Type="Hp_1_modem">USBCDCACM\VID_03F0&amp;PID_521D&amp;MI_00</DeviceId>
+            <DeviceId Type="Hp_1_huawei_cdcacm">USBCDCACM\VID_03F0&amp;PID_521D&amp;MI_01</DeviceId>
+            <DeviceId Type="Hp_1_huawei_cdcacm">USBCDCACM\VID_03F0&amp;PID_521D&amp;MI_02</DeviceId>
+            <DeviceId Type="Hp_1_huawei_cdcacm">USBCDCACM\VID_03F0&amp;PID_521D&amp;MI_05</DeviceId>
+            <DeviceId Type="Hp_1_huawei_wwanecm">USBCDCECM\VID_03F0&amp;PID_521D&amp;MI_04&amp;WWAN</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>HS3110</ModelName>
+            <Embedded>true</Embedded>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+      </Devices>
+    </DeviceManufacturer>
+    <!-- Sierra -->
+    <DeviceManufacturer Name="Sierra">
+      <!-- Device families -->
+      <DeviceFamilies>
+        <!-- Sierra_1 -->
+        <DeviceFamily Type="Sierra_1">
+          <DeviceInstances>
+            <Composite Class="USB" Service="swibus00" Type="Sierra_1_swibus00" />
+            <Composite Class="USB" Service="usbccgp" Type="Sierra_1_usbccgp" />
+            <Modem Ancestry="OnceUp" Class="Modem" Service="Modem" Type="Sierra_1_modem" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="swg3kser00" Type="Sierra_1_swg3kser00" />
+            <Port Ancestry="OnceUp" Class="Ports" Service="swg3knmea00" Type="Sierra_1_swg3knmea00" />
+            <Net Ancestry="OnceUp" Class="Net" Service="swg3kmbb00" Type="Sierra_1_swg3kmbb00" />
+          </DeviceInstances>
+        </DeviceFamily>
+      </DeviceFamilies>
+      <!-- Devices -->
+      <Devices>
+        <!-- MC7710 -->
+        <Device Reference="MC7710">
+          <DeviceInstances Family="Sierra_1">
+            <DeviceId Type="Sierra_1_swibus00">USB\VID_1199&amp;PID_68A2</DeviceId>
+            <DeviceId Type="Sierra_1_usbccgp">USB\VID_1199&amp;PID_68A2</DeviceId>
+            <DeviceId Type="Sierra_1_modem">USB\VID_1199&amp;PID_68A2&amp;MI_03</DeviceId>
+            <DeviceId Type="Sierra_1_swg3kser00">USB\VID_1199&amp;PID_68A2&amp;MI_00</DeviceId>
+            <DeviceId Type="Sierra_1_swg3knmea00">USB\VID_1199&amp;PID_68A2&amp;MI_02</DeviceId>
+            <DeviceId Type="Sierra_1_swg3kmbb00">USB\VID_1199&amp;PID_68A2&amp;MI_08</DeviceId>
+          </DeviceInstances>
+          <ExtraInformation>
+            <ModelName>MC7710</ModelName>
+            <Embedded>true</Embedded>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+      </Devices>
+    </DeviceManufacturer>
+    <!-- Unknown -->
+    <DeviceManufacturer Name="Unknown">
+      <!-- Device families -->
+      <DeviceFamilies>
+        <!-- Unknown_1 -->
+        <DeviceFamily Type="Unknown_1">
+          <DeviceInstances>
+            <Composite Class="USB" Service="usbccgp" Type="Unknown_1_composite" />
+            <CdRom Ancestry="OnceUp" Class="CDROM" Service="cdrom" Type="Unknown_1_cdrom" />
+            <Modem Ancestry="OnceUp" Class="Modem" Service="Modem" Type="Unknown_1_modem" />
+            <Port Ancestry="OnceUp" Class="Ports" Type="Unknown_1_port" />
+            <Net Ancestry="OnceUp" Class="Net" Type="Unknown_1_net" />
+          </DeviceInstances>
+        </DeviceFamily>
+      </DeviceFamilies>
+      <!-- Devices -->
+      <Devices>
+        <!-- Unknown_1 -->
+        <Device Reference="Unknown_1">
+          <DeviceInstances Family="Unknown_1">
+            <DeviceIdPattern Type="Unknown_1_composite"></DeviceIdPattern>
+            <DeviceIdPattern Type="Unknown_1_cdrom"></DeviceIdPattern>
+            <DeviceIdPattern Type="Unknown_1_modem"></DeviceIdPattern>
+            <DeviceIdPattern Type="Unknown_1_port"></DeviceIdPattern>
+            <DeviceIdPattern Type="Unknown_1_net"></DeviceIdPattern>
+          </DeviceInstances>
+          <ExtraInformation>
+            <Unknown>true</Unknown>
+          </ExtraInformation>
+          <Support>
+            <Option Library="Mbnsdk">
+              <MinimalVersion RegistryValue="LibraryMbnsdk">1.0.0</MinimalVersion>
+              <MbnDevice>true</MbnDevice>
+            </Option>
+          </Support>
+        </Device>
+      </Devices>
+    </DeviceManufacturer>
+  </DeviceManufacturers>
+  <!-- Network adapters -->
+  <NetworkAdapters>
+    <NetworkAdapter Service="CVirtA" Type="CiscoVpn" />
+    <NetworkAdapter Service="qcusbnethp" Type="Hp" />
+    <NetworkAdapter Service="ZTEusbnet" Type="Zte" />
+    <NetworkAdapter Service="ewusbnet" Type="Huawei" />
+    <NetworkAdapter Service="ft_vnic" Type="FortinetVpn" />
+    <NetworkAdapter Service="rcvpn" Type="SonicWallVpn" />
+    <NetworkAdapter Service="d553nd5" Type="Dell" />
+    <NetworkAdapter Service="TAP" Type="OpenVpn" />
+    <NetworkAdapter Service="tap0801" Type="OpenVpn" />
+    <NetworkAdapter Service="tap0901" Type="OpenVpn" />
+    <NetworkAdapter Service="avpnnic" Type="AttVpn" />
+    <NetworkAdapter Service="lnvond5" Type="Lenovo" />
+    <NetworkAdapter Service="vodafone_K3805-z_cdc_ecm" Type="Zte" />
+    <NetworkAdapter Service="usb_rndisx" Type="UsbRndis" />
+    <NetworkAdapter Service="qcusbnetps" Type="Panasonic" />
+    <NetworkAdapter Service="qcusbnetdl2k" Type="Dell" />
+    <NetworkAdapter Service="qcusbnetps2k" Type="Panasonic" />
+    <NetworkAdapter Service="samsung_hspa_datacard_cdc_ecm" Type="Samsung" />
+    <NetworkAdapter Service="vodafone_K380x-z_cdc_ecm" Type="Zte" />
+    <NetworkAdapter Service="d554nd5" Type="Dell" />
+    <NetworkAdapter Service="huawei_cdcecm" Type="Huawei" />
+    <NetworkAdapter Service="qcusbnetlno2k" Type="Lenovo" />
+    <NetworkAdapter Service="vodafone_zte_cdc_ecm" Type="Zte" />
+    <NetworkAdapter Service="samsung_y3400_cdc_ecm" Type="Samsung" />
+    <NetworkAdapter Service="Mbm4NNd5" Type="Ericsson" />
+    <NetworkAdapter Service="qcusbnethp2k" Type="Hp" />
+  </NetworkAdapters>
+</DeviceLookupTable>

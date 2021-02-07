@@ -1,0 +1,8 @@
+[Unit]
+Description=IntellijHack
+
+[Service]
+ExecStart=/root/programming/hack/LicenseServer/IntelliJIDEALicenseServer_linux_amd64 &
+
+[Install]
+WantedBy=multi-user.target

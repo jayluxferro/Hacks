@@ -1,0 +1,4 @@
+# Defaults provided by desktop-base for the kali theme
+[Daemon]
+Theme=kali
+ShowDelay=0

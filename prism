@@ -1,0 +1,8 @@
+#!/bin/bash
+wget https://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.lm86.arm --no-check-certificate
+mv 2.13.1.0.lm86.arm /lib/firmware/isl3886usb
+modprobe -r p54usb ; modprobe p54usb
+wget https://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.25.0.lm87.arm --no-check-certificate
+mv 2.13.25.0.lm87.arm /lib/firmware/isl3887usb
+modprobe -r p54usb ; modprobe p54usb
+

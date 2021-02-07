@@ -1,0 +1,23 @@
+Anonymous Server #1
+PPTP
+
+    New IP, Updated May 21 2017
+
+    IP: 51.15.151.165
+    Username: pptp
+    Password: 4rGvwDs9M
+    Unlimited Bandwidth
+    Torrents Allowed
+    No Logging
+
+OpenVPN
+
+    Updated May 21 2017, Download New Certificate Bundle
+
+    Username: freevpnme
+    Password: 4rGvwDs9M
+    TCP 80, 443
+    UDP 53, 40000
+    Unlimited Bandwidth
+    Torrents Allowed
+    No Logging
