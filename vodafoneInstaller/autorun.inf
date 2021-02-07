@@ -1,4 +1,0 @@
-[autorun] 
-open=setup_vmb_lite.exe /checkApplicationPresence 
-icon=setup_vmb_lite.exe 
-label=VMB Lite 10.3.409.46933 
